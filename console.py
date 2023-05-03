@@ -139,7 +139,7 @@ class HBNBCommand(cmd.Cmd):
         new_instance = HBNBCommand.classes[args[0]](**kwargs)
         storage.save()
         print(new_instance.id)
-   
+        print(type(new_instance).__name__)
     """
     def do_create(self, args, **kwargs):
         # Check if arg is in classes
